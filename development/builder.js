@@ -313,7 +313,7 @@ class HomepageFile extends BuildFile {
     this.host =
       mode === "development"
         ? "http://localhost:8000/"
-        : "https://githu.com/Tringlyman/Scratch-Extensions/";
+        : "https://github.com/Tringlyman/Scratch-Extensions/";
   }
 
   getType() {
@@ -329,9 +329,7 @@ class HomepageFile extends BuildFile {
   }
 
   getRunExtensionURL(extensionSlug) {
-    return `https://studio.penguinmod.com/editor.html?extension=${this.getFullExtensionURL(
-      extensionSlug
-    )}`;
+    return `https://studio.penguinmod.com/editor.html?extension=${this.getFullExtensionURL(extensionSlug)}`;
   }
 
   /**
