@@ -313,7 +313,7 @@ class HomepageFile extends BuildFile {
     this.host =
       mode === "development"
         ? "http://localhost:8000/"
-        : "https://extensions.turbowarp.org/";
+        : "https://githu.com/Tringlyman/Scratch-Extensions/";
   }
 
   getType() {
@@ -329,7 +329,7 @@ class HomepageFile extends BuildFile {
   }
 
   getRunExtensionURL(extensionSlug) {
-    return `https://turbowarp.org/editor?extension=${this.getFullExtensionURL(
+    return `https://studio.penguinmod.com/editor.html?extension=${this.getFullExtensionURL(
       extensionSlug
     )}`;
   }
@@ -340,7 +340,7 @@ class HomepageFile extends BuildFile {
    */
   getRunSampleURL(sampleFile) {
     const path = encodeURIComponent(`samples/${sampleFile.getSlug()}`);
-    return `https://turbowarp.org/editor?project_url=${this.host}${path}`;
+    return `https://penguinmod.com/editor?project_url=${this.host}${path}`;
   }
 
   read() {

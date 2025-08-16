@@ -1,7 +1,7 @@
 {
-  "name": "@turbowarp/extensions",
+  "name": "@tringlyman/Scratch-Extensions",
   "version": "0.0.1",
-  "description": "Unsandboxed extensions for TurboWarp",
+  "description": "Unsandboxed extensions for PenguinMod",
   "exports": {
     "./builder": "./development/builder.js"
   },
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TurboWarp/extensions.git"
+    "url": "https://github.com/Tringlyman/Scratch-Extensions.V2.git"
   },
   "license": "MIT AND LGPL-3.0-only AND GPL-3.0-only AND CC-BY-SA-4.0 AND CC-BY-4.0 AND CC-BY-2.5 AND CC0-1.0 AND Apache-2.0 AND MPL-2.0 AND BSD-3-Clause",
   "bugs": {
