@@ -2,7 +2,7 @@
 
 User-contributed unsandboxed extension gallery for TurboWarp.
 
-https://Tringlymans-Sratch-Extensions.vercel.app/
+https://Tringlymans-Scratch-Extensions.vercel.app/
 
 ## Contributing
 
