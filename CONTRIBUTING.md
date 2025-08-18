@@ -1,3 +1,5 @@
+# Currently not accepting **ANY** Contributing of extensions!
+
 # Contributing extensions
 
 Before you submit extensions, please read the custom extension tutorial **in full**:
