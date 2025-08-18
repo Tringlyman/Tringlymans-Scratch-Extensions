@@ -1,4 +1,5 @@
-# Currently not accepting **ANY** Contributing of extensions!
+> [!WARNING]
+> Currently not accepting **ANY** Contributing of extensions!
 
 # Contributing extensions
 
