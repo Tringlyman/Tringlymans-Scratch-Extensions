@@ -6,6 +6,9 @@ https://Tringlymans-Scratch-Extensions.vercel.app/
 
 ## Contributing
 
+> [!WARNING]
+> Currently not accepting **ANY** Contributing of extensions!
+
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
