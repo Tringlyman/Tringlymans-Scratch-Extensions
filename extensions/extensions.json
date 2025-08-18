@@ -1,5 +1,9 @@
+// This file supports comments
+
 [
-  // This file supports comments
+  // Extensions
   "Extension/Tringlyman's Raw Extension",
+
+  // Externals
   "Externals/TringlyBuilder"
 ]
