@@ -127,14 +127,12 @@
       }
       .extension-banner {
         position: relative;
+        margin: -8px -8px 0 -8px;
       }
       .extension-image {
-        display: inline;
+        display: block;
         width: 100%;
         aspect-ratio: 2/1;
-        background-color: #555;
-        border: 0px solid #555;
-        border-radius: 10px;
       }
 
       .extension-buttons {
@@ -322,7 +320,7 @@
     </script>
 
     <div class="section extensions-outer">
-      <div class="extensions">
+      <center><div class="extensions">
         <%
         const peopleToHTML = (people) => {
           let result = '';
@@ -386,11 +384,21 @@
                     `Created by ${peopleToHTML(metadata.by)}.`
                   ) : metadata.original.length ? (
                     `Created by ${peopleToHTML(metadata.original)}.`
-                  ) : ''
+                  ) : 'Created by unknown'
                 %>
               </p>
             </div>
-          <% } else { %>
+          <% } %>
+        <% } %>
+      </div></center>
+    </div>
+        
+    <center style="align-items: center; border: 3px solid #333; border-radius: 10px; background-color: #3c3c3c;"><h1>External Links</h1></center>
+        
+    <div class="section extensions-outer">
+      <center><div class="extensions">
+        <% for (const [extensionSlug, metadata] of Object.entries(extensionMetadata)) { %>
+          <% if (extensionSlug.startsWith("Externals/")) { %>
             <div class="extension">
               <div class="extension-banner">
                 <% const image = extensionImages[extensionSlug] || 'images/unknown.svg'; %>
@@ -399,7 +407,7 @@
                 <br>
 
                 <div class="extension-buttons">
-                  <a class="open" href="<%= `https://${extensionSlug.slice(10)}` %>" target="_blank">Open Extension</a>
+                  <a class="open" href="<%= getOpenExternal(`${metadata.external}`) %>" target="_blank">Open External</a>
                 </div>
               </div>
         
@@ -413,13 +421,13 @@
                     `Created by ${peopleToHTML(metadata.by)}.`
                   ) : metadata.original.length ? (
                     `Created by ${peopleToHTML(metadata.original)}.`
-                  ) : ''
+                  ) : 'Created by unknown'
                 %>
               </p>
             </div>
           <% } %>
         <% } %>
-      </div>
+      </div></center>
     </div>
 
     <footer class="section">

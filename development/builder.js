@@ -258,9 +258,17 @@ class ExtensionFile extends BuildFile {
         string: metadata.name,
         developer_comment: getMetadataDescription("Name"),
       },
+      [`${slug}version`]: {
+        string: metadata.version,
+        developer_comment: getMetadataDescription("Version")
+      },
       [`${slug}@description`]: {
         string: metadata.description,
         developer_comment: getMetadataDescription("Description"),
+      },
+      [`${slug}external`]: {
+        string: metadata.external,
+        developer_comment: getMetadataDescription("External")
       },
     };
 
@@ -332,6 +340,10 @@ class HomepageFile extends BuildFile {
     return `https://studio.penguinmod.com/editor.html?extension=${this.getFullExtensionURL(extensionSlug)}`;
   }
 
+  getOpenExternal(extensionSlug) {
+    return `${extensionSlug}`
+  }
+
   /**
    * @param {SampleFile} sampleFile
    * @returns {string}
@@ -367,6 +379,7 @@ class HomepageFile extends BuildFile {
       extensionMetadata,
       getFullExtensionURL: this.getFullExtensionURL.bind(this),
       getRunExtensionURL: this.getRunExtensionURL.bind(this),
+      getOpenExternal: this.getOpenExternal.bind(this),
       getDocumentationURL: this.getDocumentationURL.bind(this),
       getRunSampleURL: this.getRunSampleURL.bind(this),
     });
@@ -451,6 +464,7 @@ class JSONMetadataFile extends BuildFile {
       if (this.withDocs.has(extensionSlug)) {
         extension.docs = true;
       }
+
       const samples = this.samples.get(extensionSlug);
       if (samples) {
         extension.samples = samples.map((i) => i.getTitle());
@@ -703,6 +717,7 @@ class Builder {
         "utf-8"
       )
     );
+
 
     /**
      * Look up by [group][locale][id]

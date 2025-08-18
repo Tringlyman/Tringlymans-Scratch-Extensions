@@ -19,8 +19,10 @@ class Extension {
   constructor() {
     this.id = "";
     this.name = "";
+    this.version = "";
     this.description = "";
     this.license = "";
+    this.external = "";
     /** @type {Person[]} */
     this.by = [];
     /** @type {Person[]} */
@@ -88,11 +90,17 @@ const parseMetadata = (extensionCode) => {
       case "name":
         metadata.name = value;
         break;
+      case "version":
+        metadata.version = value;
+        break;
       case "description":
         metadata.description = value;
         break;
       case "license":
         metadata.license = value;
+        break;
+      case "external":
+        metadata.external = value;
         break;
       case "by":
         metadata.by.push(parsePerson(value));
