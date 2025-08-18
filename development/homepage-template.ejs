@@ -408,7 +408,10 @@
 
                 <div class="extension-buttons">
                   <a class="open" href="<%= getOpenExternal(`${metadata.external}`) %>" target="_blank">Open External</a>
-                </div>
+                  <% if (metadata.doc) { %> 
+                      <a class="open" href="<%= getOpenExternal(`${metadata.doc}`) %>" target="_blank">Open Documentation</a>
+                  <% } %>
+                </div> 
               </div>
         
               <h2><%= metadata.name %></h2>

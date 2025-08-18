@@ -2,8 +2,13 @@
 
 [
   // Extensions
-  "Extension/Tringlyman's Raw Extension",
+  "Extension/JSExtension",
+  "Extension/MathPlusExtension",
+  "Extension/SaveExtension",
+  "Extension/WebsiteExtension",
+  "Extension/RawExtension",
 
   // Externals
-  "Externals/TringlyBuilder"
+  "Externals/TurboBuilder",
+  "Externals/TringlyBuilder",
 ]

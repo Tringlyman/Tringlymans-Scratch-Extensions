@@ -270,6 +270,10 @@ class ExtensionFile extends BuildFile {
         string: metadata.external,
         developer_comment: getMetadataDescription("External")
       },
+      [`${slug}doc`]: {
+        string: metadata.doc,
+        developer_comment: getMetadataDescription("Doc")
+      },
     };
 
     const parseTranslations = require("./parse-extension-translations");
