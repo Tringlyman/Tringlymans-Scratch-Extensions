@@ -16,7 +16,7 @@ jobs:
 
     # This workflow is not useful to forks without setting up Transifex and modifying the
     # workflow to use your organization, project, resources, API token, ...
-    if: ${{ github.repository == 'Tringlyman/Tringlymans=Scratch-Extensions' && github.ref == 'refs/heads/master' }}
+    if: ${{ github.repository == 'TurboWarp/extensions' && github.ref == 'refs/heads/master' }}
 
     steps:
       - name: Checkout fork
@@ -33,7 +33,7 @@ jobs:
           git fetch upstream
           git checkout upstream/master
         env:
-          UPSTREAM_REPO: "Tringlyman/Tringlymans-Scratch-Extensions"
+          UPSTREAM_REPO: "TurboWarp/extensions"
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
