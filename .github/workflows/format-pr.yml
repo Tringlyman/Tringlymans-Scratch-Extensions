@@ -27,7 +27,7 @@ jobs:
       - name: Checkout upstream
         uses: actions/checkout@v4
         with:
-          repository: TurboWarp/extensions
+          repository: Tringlyman/Tringlymans-Scratch-Extensions
           persist-credentials: false
       - name: Checkout pull request
         run: gh pr checkout "$PR_NUM"
