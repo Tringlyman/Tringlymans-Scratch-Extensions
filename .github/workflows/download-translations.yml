@@ -33,7 +33,7 @@ jobs:
           git fetch upstream
           git checkout upstream/master
         env:
-          UPSTREAM_REPO: "TurboWarp/extensions"
+          UPSTREAM_REPO: "Tringlyman/Tringlymans-Scratch-Extensions"
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
