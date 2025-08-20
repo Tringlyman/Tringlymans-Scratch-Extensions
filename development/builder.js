@@ -347,15 +347,15 @@ class HomepageFile extends BuildFile {
   getOpenExternal(extensionSlug) {
     return `${extensionSlug}`
   }
-
+  
   /**
    * @param {SampleFile} sampleFile
    * @returns {string}
    */
-  getRunSampleURL(sampleFile) {
+  /*getRunSampleURL(sampleFile) {
     const path = encodeURIComponent(`samples/${sampleFile.getSlug()}`);
     return `https://penguinmod.com/editor?project_url=${this.host}${path}`;
-  }
+  }*/
 
   read() {
     const renderTemplate = require("./render-template");
@@ -385,7 +385,7 @@ class HomepageFile extends BuildFile {
       getRunExtensionURL: this.getRunExtensionURL.bind(this),
       getOpenExternal: this.getOpenExternal.bind(this),
       getDocumentationURL: this.getDocumentationURL.bind(this),
-      getRunSampleURL: this.getRunSampleURL.bind(this),
+      //getRunSampleURL: this.getRunSampleURL.bind(this),
     });
   }
 }
@@ -469,10 +469,10 @@ class JSONMetadataFile extends BuildFile {
         extension.docs = true;
       }
 
-      const samples = this.samples.get(extensionSlug);
+      /*const samples = this.samples.get(extensionSlug);
       if (samples) {
         extension.samples = samples.map((i) => i.getTitle());
-      }
+      }*/
       if (metadata.scratchCompatible) {
         extension.scratchCompatible = true;
       }
@@ -831,7 +831,7 @@ class Builder {
       extensionImages,
       featuredExtensionSlugs,
       extensionsWithDocs,
-      samples,
+     // samples,
       this.mode
     );
     build.files["/sitemap.xml"] = new SitemapFile(build);
@@ -842,7 +842,7 @@ class Builder {
         extensionImages,
         featuredExtensionSlugs,
         extensionsWithDocs,
-        samples,
+        //samples,
         translations["extension-metadata"]
       );
 
